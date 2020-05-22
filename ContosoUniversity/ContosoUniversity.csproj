@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200521153424_Init.cs" />
-    <Compile Remove="Migrations\20200521153424_Init.Designer.cs" />
-    <Compile Remove="Migrations\20200521155102_Add DateModified Col for Department、Course、Person.cs" />
-    <Compile Remove="Migrations\20200521155102_Add DateModified Col for Department、Course、Person.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

@@ -10,6 +10,7 @@ namespace ContosoUniversity.Models
     {
         public void Configure(EntityTypeBuilder<Person> entity)
         {
+            entity.Property(e => e.DateModified).HasDefaultValueSql("((GETDATE()))");
             entity.Property(e => e.Discriminator).HasDefaultValueSql("('Instructor')");
         }
     }

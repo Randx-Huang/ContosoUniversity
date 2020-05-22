@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ContosoUniversity.Models
 {
-    public partial class Person
+    public partial class Person : IIsDeleted
     {
         public Person()
         {
@@ -35,6 +35,8 @@ namespace ContosoUniversity.Models
         [Column(TypeName = "datetime")]
         public DateTime DateModified { get; set; }
 
+        [Column(TypeName = "bit")]
+        public bool IsDeleted { get; set; }
         [InverseProperty("Instructor")]
         public virtual OfficeAssignment OfficeAssignment { get; set; }
         [InverseProperty("Instructor")]

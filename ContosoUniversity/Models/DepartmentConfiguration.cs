@@ -10,6 +10,8 @@ namespace ContosoUniversity.Models
     {
         public void Configure(EntityTypeBuilder<Department> entity)
         {
+            entity.Property(e => e.DateModified).HasDefaultValueSql("((GETDATE()))");
+
             entity.HasIndex(e => e.InstructorID)
                 .HasName("IX_InstructorID");
 

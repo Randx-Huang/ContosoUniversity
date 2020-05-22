@@ -12,21 +12,21 @@ namespace ContosoUniversity.Migrations
                 table: "Person",
                 type: "datetime",
                 nullable: false,
-                defaultValue: "(GetDate())");
+                defaultValueSql: "((GETDATE()))");
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DateModified",
                 table: "Department",
                 type: "datetime",
                 nullable: false,
-                defaultValue: "(GetDate())");
+                defaultValueSql: "((GETDATE()))");
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DateModified",
                 table: "Course",
                 type: "datetime",
                 nullable: false,
-                defaultValue: "(GetDate())");
+                defaultValueSql: "((GETDATE()))");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

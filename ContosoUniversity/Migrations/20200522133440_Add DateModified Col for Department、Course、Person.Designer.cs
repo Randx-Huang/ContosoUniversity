@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoUniversity.Migrations
 {
     [DbContext(typeof(ContosouniversityContext))]
-    [Migration("20200521160019_Add DateModified Col for Department、Course、Person")]
+    [Migration("20200522133440_Add DateModified Col for Department、Course、Person")]
     partial class AddDateModifiedColforDepartmentCoursePerson
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,8 @@ namespace ContosoUniversity.Migrations
 
                     b.Property<DateTime>("DateModified")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("((GETDATE()))");
 
                     b.Property<int>("DepartmentID")
                         .ValueGeneratedOnAdd()
@@ -84,7 +85,8 @@ namespace ContosoUniversity.Migrations
 
                     b.Property<DateTime>("DateModified")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("((GETDATE()))");
 
                     b.Property<int?>("InstructorID")
                         .HasColumnType("int");
@@ -164,7 +166,8 @@ namespace ContosoUniversity.Migrations
 
                     b.Property<DateTime>("DateModified")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("((GETDATE()))");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()

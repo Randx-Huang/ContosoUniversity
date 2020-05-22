@@ -51,7 +51,7 @@ namespace ContosoUniversity.Controllers
             {
                 return BadRequest();
             }
-            _context.Department.FromSqlRaw($@"Department_Update 
+            _context.Department.FromSqlInterpolated($@"Department_Update 
 {department.DepartmentID},'{department.Name}', {department.Budget} 
 , '{department.StartDate:d}',{department.InstructorID},'{department.RowVersion}'");
             // _context.Entry(department).State = EntityState.Modified;
@@ -82,7 +82,7 @@ namespace ContosoUniversity.Controllers
         public async Task<ActionResult<Department>> PostDepartment(Department department)
         {
             //_context.Department.Add(department);
-            _context.Department.FromSqlRaw($@"Department_Insert '{department.Name}', {department.Budget} , '{department.StartDate:d}',{department.InstructorID}");
+            _context.Department.FromSqlInterpolated($@"Department_Insert '{department.Name}', {department.Budget} , '{department.StartDate:d}',{department.InstructorID}");
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetDepartment", new { id = department.DepartmentID }, department);
@@ -98,7 +98,7 @@ namespace ContosoUniversity.Controllers
                 return NotFound();
             }
 
-            _context.Department.FromSqlRaw($@"Department_Delete {department.DepartmentID}, '{department.RowVersion}'");
+            _context.Department.FromSqlInterpolated($@"Department_Delete {department.DepartmentID}, '{department.RowVersion}'");
             //_context.Department.Remove(department);
             await _context.SaveChangesAsync();
 

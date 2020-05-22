@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {}
+    "C:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {
+    "C:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
+        "projectUniqueName": "C:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
         "projectName": "ContosoUniversity",
-        "projectPath": "c:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
+        "projectPath": "C:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\ContosoUniversity.csproj",
         "packagesPath": "C:\\Users\\Randx\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\obj\\",
+        "outputPath": "C:\\Users\\Randx\\Source\\Repos\\ContosoUniversity\\ContosoUniversity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
